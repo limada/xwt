@@ -1,0 +1,11 @@
+<Project>
+
+    <PropertyGroup>
+        <InMonoDevelopTree Condition="Exists('$(MSBuildThisFileDirectory)..\..\msbuild\MonoDevelop.AfterCommon.props')">true</InMonoDevelopTree>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <TargetFrameworks>net472;netstandard2</TargetFrameworks>
+    </PropertyGroup>
+    <PropertyGroup>
+        <SuppressImplicitGitSourceLink>true</SuppressImplicitGitSourceLink>
+    </PropertyGroup>
+</Project>
