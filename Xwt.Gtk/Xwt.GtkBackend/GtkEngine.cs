@@ -136,24 +136,26 @@ namespace Xwt.GtkBackend
 
 			if (typeName != null) {
 				var loc = Path.GetDirectoryName (GetType ().Assembly.Location);
-				loc = Path.Combine (loc, asmName + ".dll");
+				if (loc !=null) {
+					loc = Path.Combine (loc, asmName + ".dll");
 
-				Assembly asm = null;
-				try {
-					if (File.Exists (loc)) {
-						asm = Assembly.LoadFrom (loc);
-					} else {
-						asm = Assembly.Load (asmName);
+					Assembly asm = null;
+					try {
+						if (File.Exists (loc)) {
+							asm = Assembly.LoadFrom (loc);
+						} else {
+							asm = Assembly.Load (asmName);
+						}
+					} catch {
+						// Not found
 					}
-				} catch {
-					// Not found
-				}
 
-				Type platformType = asm != null ? asm.GetType (typeName) : null;
+					Type platformType = asm != null ? asm.GetType (typeName) : null;
 
-				if (platformType != null) {
-					platformBackend = (GtkPlatformBackend)Activator.CreateInstance (platformType);
-					platformBackend.Initialize (this);
+					if (platformType != null) {
+						platformBackend = (GtkPlatformBackend)Activator.CreateInstance (platformType);
+						platformBackend.Initialize (this);
+					}
 				}
 			}
 		}
