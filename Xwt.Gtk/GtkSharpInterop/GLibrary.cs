@@ -28,8 +28,8 @@ class GLibrary
         _libraryDefinitions[Library.Gtk] = new[] { "libgtk-3-0.dll", "libgtk-3.so.0", "libgtk-3.0.dylib", "gtk-3.dll" };
         _libraryDefinitions[Library.PangoCairo] = new[] { "libpangocairo-1.0-0.dll", "libpangocairo-1.0.so.0", "libpangocairo-1.0.0.dylib", "pangocairo-1.dll" };
         _libraryDefinitions[Library.Fontconfig] = new[] { "fontconfig.dll", "libfontconfig.so.1", "libfontconfig.1.dylib", "fontconfig.dll" };
-        // <dllmap os="!windows,osx" dll="libwebkitgtk-3.0-0.dll" target="libwebkitgtk-3.0.so.0"/> <dllmap os="osx" dll="libwebkitgtk-3.0-0.dll" target="libwebkitgtk-3.0.0.dylib"/>
-        _libraryDefinitions[Library.Webkit] = new[] { "libwebkitgtk-3.0-0.dll", "libwebkitgtk-3.0.so.0", "libwebkitgtk-3.0.0.dylib", "libwebkitgtk-3.dll" };
+        _libraryDefinitions[Library.Webkit] = new[] { "libwebkit2gtk-4.0.dll", "libwebkit2gtk-4.1.so.0", "libwebkit2gtk-4.0.dylib", "libwebkit2gtk-4.0.0.dll" };
+
     }
 
     public static IntPtr Load(Library library)
