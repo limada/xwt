@@ -19,8 +19,8 @@
     <ProjectReference Include="..\Xwt\Xwt.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GtkSharp" Version="3.24.24.132-develop" />
-    <PackageReference Include="WebkitGtkSharp" Version="3.24.24.132-develop" />
+    <PackageReference Include="GtkSharp" Version="3.24.24.133-develop" />
+    <PackageReference Include="WebkitGtkSharp" Version="3.24.24.133-develop" />
     <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
     <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
     <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
